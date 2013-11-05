@@ -36,15 +36,15 @@
     </GitVersion>
 
     <AssemblyInfo CodeLanguage="CS"
-                  OutputFile="$(SourceDir)\Illallangi.CloudStoragePS\Properties\AssemblyInfo.cs"
-                  AssemblyTitle="Cloud Storage PowerShell Module"
+                  OutputFile="$(SourceDir)\Illallangi.GitHubPS\Properties\AssemblyInfo.cs"
+                  AssemblyTitle="GitHub PowerShell Module"
                   AssemblyDescription=""
                   AssemblyCompany="Illallangi Enterprises"
-                  AssemblyProduct="Cloud Storage PowerShell Module"
+                  AssemblyProduct="GitHub PowerShell Module"
                   AssemblyCopyright="Copyright © Illallangi Enterprises 2013"
                   ComVisible="false"
                   AssemblyInformationalVersion="Built from hash '$(GitCommitHash)'"
-                  Guid="e92417b8-61ad-48e5-869d-80a19f6f9d93"
+                  Guid="90DEE887-18D3-4C48-BD02-3D40828ABF7E"
                   AssemblyVersion="$(Version)"
                   AssemblyFileVersion="$(Version)" 
                   Condition="$(Version) != '0.0.0.1'" />
@@ -53,7 +53,7 @@
   <Target Name="Compile" DependsOnTargets="Version">
     <Message Text="=========== Compile ===========" Importance="High" />
 
-    <MSBuild Projects="$(SourceDir)\Illallangi.CloudStoragePS.sln" Properties="Configuration=$(Configuration)" Targets="Rebuild" />
+    <MSBuild Projects="$(SourceDir)\Illallangi.GitHubPS.sln" Properties="Configuration=$(Configuration)" Targets="Rebuild" />
   </Target>
 
   <Target Name="Copy32" DependsOnTargets="Compile">
@@ -61,25 +61,22 @@
 
     <MakeDir Directories="$(BuildDir32)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.CloudStoragePS\bin\$(Configuration)\Illallangi.CloudStoragePS.dll"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Illallangi.GitHubPS.dll"
           DestinationFolder="$(BuildDir32)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.CloudStoragePS\bin\$(Configuration)\Illallangi.CloudStoragePS.dll.config"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Illallangi.GitHubPS.dll.config"
           DestinationFolder="$(BuildDir32)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.CloudStoragePS\bin\$(Configuration)\Illallangi.CloudStoragePS.psd1"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Illallangi.GitHubPS.psd1"
           DestinationFolder="$(BuildDir32)\bin" />
     
-    <Copy SourceFiles="$(SourceDir)\Illallangi.CloudStoragePS\bin\$(Configuration)\Illallangi.CloudStoragePS.psm1"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Illallangi.GitHubPS.psm1"
           DestinationFolder="$(BuildDir32)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.CloudStoragePS\bin\$(Configuration)\DropNet.dll"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Octokit.dll"
           DestinationFolder="$(BuildDir32)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.CloudStoragePS\bin\$(Configuration)\RestSharp.dll"
-          DestinationFolder="$(BuildDir32)\bin" />
-
-    <Copy SourceFiles="$(SourceDir)\Illallangi.CloudStoragePS\bin\$(Configuration)\Newtonsoft.Json.dll"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Newtonsoft.Json.dll"
           DestinationFolder="$(BuildDir32)\bin" />
   </Target>
   
@@ -88,25 +85,22 @@
 
     <MakeDir Directories="$(BuildDir64)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.CloudStoragePS\bin\$(Configuration)\Illallangi.CloudStoragePS.dll"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Illallangi.GitHubPS.dll"
           DestinationFolder="$(BuildDir64)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.CloudStoragePS\bin\$(Configuration)\Illallangi.CloudStoragePS.dll.config"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Illallangi.GitHubPS.dll.config"
           DestinationFolder="$(BuildDir64)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.CloudStoragePS\bin\$(Configuration)\Illallangi.CloudStoragePS.psd1"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Illallangi.GitHubPS.psd1"
           DestinationFolder="$(BuildDir64)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.CloudStoragePS\bin\$(Configuration)\Illallangi.CloudStoragePS.psm1"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Illallangi.GitHubPS.psm1"
           DestinationFolder="$(BuildDir64)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.CloudStoragePS\bin\$(Configuration)\DropNet.dll"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Octokit.dll"
           DestinationFolder="$(BuildDir64)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.CloudStoragePS\bin\$(Configuration)\RestSharp.dll"
-          DestinationFolder="$(BuildDir64)\bin" />
-
-    <Copy SourceFiles="$(SourceDir)\Illallangi.CloudStoragePS\bin\$(Configuration)\Newtonsoft.Json.dll"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Newtonsoft.Json.dll"
           DestinationFolder="$(BuildDir64)\bin" />
   </Target>
 
@@ -117,7 +111,7 @@
       <Output ItemName="ZipFiles32" TaskParameter="Include"/>
     </CreateItem>
 
-    <Zip ZipFileName="$(ArtifactsDir)\Illallangi Enterprises Cloud Storage PowerShell Module x86 v$(Version).zip" WorkingDirectory="$(BuildDir32)\bin" Files="@(ZipFiles32)" />
+    <Zip ZipFileName="$(ArtifactsDir)\Illallangi Enterprises GitHub PowerShell Module x86 v$(Version).zip" WorkingDirectory="$(BuildDir32)\bin" Files="@(ZipFiles32)" />
   </Target>
 
   <Target Name="Zip64" DependsOnTargets="Copy64">
@@ -127,14 +121,14 @@
       <Output ItemName="ZipFiles64" TaskParameter="Include"/>
     </CreateItem>
 
-    <Zip ZipFileName="$(ArtifactsDir)\Illallangi Enterprises Cloud Storage PowerShell Module x64 v$(Version).zip" WorkingDirectory="$(BuildDir64)\bin" Files="@(ZipFiles64)" />
+    <Zip ZipFileName="$(ArtifactsDir)\Illallangi Enterprises GitHub PowerShell Module x64 v$(Version).zip" WorkingDirectory="$(BuildDir64)\bin" Files="@(ZipFiles64)" />
   </Target>
 
   <Target Name="MSI32" DependsOnTargets="Copy32">
     <Message Text="=========== MSI x86 ===========" Importance="High" />
     <MakeDir Directories="$(BuildDir32)\wix" />
     <Exec Command='"@(Candle)" -nologo -wx -dsource="$(BuildDir32)\bin" -out "$(BuildDir32)\wix\build.wixobj" "$(MSBuildProjectDirectory)\build.wxs"' />
-    <Exec Command='"@(Light)" -nologo -wx -ext WixUIExtension -out "$(ArtifactsDir)\Illallangi Enterprises Cloud Storage PowerShell Module x86 v$(Version).msi" -pdbout "$(BuildDir32)\wix\build.wixpdb" "$(BuildDir32)\wix\build.wixobj"' />
+    <Exec Command='"@(Light)" -nologo -wx -ext WixUIExtension -out "$(ArtifactsDir)\Illallangi Enterprises GitHub PowerShell Module x86 v$(Version).msi" -pdbout "$(BuildDir32)\wix\build.wixpdb" "$(BuildDir32)\wix\build.wixobj"' />
   </Target>
 
   <Target Name="MSI64" DependsOnTargets="Copy64">
@@ -144,7 +138,7 @@
 
     <Exec Command='"@(Candle)" -nologo -wx -arch x64 -dsource="$(BuildDir64)\bin" -out "$(BuildDir64)\wix\build.wixobj" "$(MSBuildProjectDirectory)\build.wxs"' />
 
-    <Exec Command='"@(Light)" -nologo -wx -ext WixUIExtension -out "$(ArtifactsDir)\Illallangi Enterprises Cloud Storage PowerShell Module x64 v$(Version).msi" -pdbout "$(BuildDir64)\wix\build.wixpdb" "$(BuildDir64)\wix\build.wixobj"' />
+    <Exec Command='"@(Light)" -nologo -wx -ext WixUIExtension -out "$(ArtifactsDir)\Illallangi Enterprises GitHub PowerShell Module x64 v$(Version).msi" -pdbout "$(BuildDir64)\wix\build.wixpdb" "$(BuildDir64)\wix\build.wixobj"' />
   </Target>
   
   <Target Name="All" DependsOnTargets="Zip32;Zip64;MSI32;MSI64">
