@@ -48,7 +48,7 @@
         <Directory Id="WindowsPowerShell" Name="WindowsPowerShell">
           <Directory Id="v1.0" Name="v1.0">
             <Directory Id="Modules" Name="Modules">
-              <Directory Id="SOFTWAREDIR" Name="Illallangi.GitHubPS" />
+              <Directory Id="SOFTWAREDIR" Name="Illallangi.GitHub" />
             </Directory>
           </Directory>
         </Directory>
@@ -63,11 +63,11 @@
     <Property Id="ARPNOMODIFY" Value="1" />
 
     <Feature Id="Complete" Level="1" Title="$(var.AppName)">
-      <Component Id="IllallangiGitHubPSDllC" Directory="SOFTWAREDIR" Guid="{128F2E8F-113A-4195-8666-671D04F4D492}" Permanent="yes" >
-        <File Id="IllallangiGitHubPSDllC" KeyPath="yes" Source="$(var.source)\Illallangi.GitHubPS.dll" />
-        <File Id="IllallangiGitHubPSDllCConfig" Source="$(var.source)\Illallangi.GitHubPS.dll.Config" />
-        <File Id="IllallangiGitHubPSDllCPSD1" Source="$(var.source)\Illallangi.GitHubPS.psd1" />
-        <File Id="IllallangiGitHubPSDllCPSM1" Source="$(var.source)\Illallangi.GitHubPS.psm1" />
+      <Component Id="IllallangiGitHubDllC" Directory="SOFTWAREDIR" Guid="{128F2E8F-113A-4195-8666-671D04F4D492}" Permanent="yes" >
+        <File Id="IllallangiGitHubDllC" KeyPath="yes" Source="$(var.source)\Illallangi.GitHub.dll" />
+        <File Id="IllallangiGitHubDllCConfig" Source="$(var.source)\Illallangi.GitHub.dll.Config" />
+        <File Id="IllallangiGitHubDllCPSD1" Source="$(var.source)\Illallangi.GitHub.psd1" />
+        <File Id="IllallangiGitHubDllCPSM1" Source="$(var.source)\Illallangi.GitHub.psm1" />
       </Component>
       <Component Id="NewtonsoftJsonDllC" Directory="SOFTWAREDIR" Guid="{40CAFE9F-8506-4303-949E-363DB2841885}" Permanent="yes" >
         <File Id="NewtonsoftJsonDllF" KeyPath="yes" Source="$(var.source)\Newtonsoft.Json.dll" />

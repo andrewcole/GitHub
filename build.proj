@@ -36,7 +36,7 @@
     </GitVersion>
 
     <AssemblyInfo CodeLanguage="CS"
-                  OutputFile="$(SourceDir)\Illallangi.GitHubPS\Properties\AssemblyInfo.cs"
+                  OutputFile="$(SourceDir)\Illallangi.GitHub\Properties\AssemblyInfo.cs"
                   AssemblyTitle="GitHub PowerShell Module"
                   AssemblyDescription=""
                   AssemblyCompany="Illallangi Enterprises"
@@ -53,7 +53,7 @@
   <Target Name="Compile" DependsOnTargets="Version">
     <Message Text="=========== Compile ===========" Importance="High" />
 
-    <MSBuild Projects="$(SourceDir)\Illallangi.GitHubPS.sln" Properties="Configuration=$(Configuration)" Targets="Rebuild" />
+    <MSBuild Projects="$(SourceDir)\Illallangi.GitHub.sln" Properties="Configuration=$(Configuration)" Targets="Rebuild" />
   </Target>
 
   <Target Name="Copy32" DependsOnTargets="Compile">
@@ -61,22 +61,22 @@
 
     <MakeDir Directories="$(BuildDir32)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Illallangi.GitHubPS.dll"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub\bin\$(Configuration)\Illallangi.GitHub.dll"
           DestinationFolder="$(BuildDir32)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Illallangi.GitHubPS.dll.config"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub\bin\$(Configuration)\Illallangi.GitHub.dll.config"
           DestinationFolder="$(BuildDir32)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Illallangi.GitHubPS.psd1"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub\bin\$(Configuration)\Illallangi.GitHub.psd1"
           DestinationFolder="$(BuildDir32)\bin" />
     
-    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Illallangi.GitHubPS.psm1"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub\bin\$(Configuration)\Illallangi.GitHub.psm1"
           DestinationFolder="$(BuildDir32)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Octokit.dll"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub\bin\$(Configuration)\Octokit.dll"
           DestinationFolder="$(BuildDir32)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Newtonsoft.Json.dll"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub\bin\$(Configuration)\Newtonsoft.Json.dll"
           DestinationFolder="$(BuildDir32)\bin" />
   </Target>
   
@@ -85,22 +85,22 @@
 
     <MakeDir Directories="$(BuildDir64)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Illallangi.GitHubPS.dll"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub\bin\$(Configuration)\Illallangi.GitHub.dll"
           DestinationFolder="$(BuildDir64)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Illallangi.GitHubPS.dll.config"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub\bin\$(Configuration)\Illallangi.GitHub.dll.config"
           DestinationFolder="$(BuildDir64)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Illallangi.GitHubPS.psd1"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub\bin\$(Configuration)\Illallangi.GitHub.psd1"
           DestinationFolder="$(BuildDir64)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Illallangi.GitHubPS.psm1"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub\bin\$(Configuration)\Illallangi.GitHub.psm1"
           DestinationFolder="$(BuildDir64)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Octokit.dll"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub\bin\$(Configuration)\Octokit.dll"
           DestinationFolder="$(BuildDir64)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHubPS\bin\$(Configuration)\Newtonsoft.Json.dll"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub\bin\$(Configuration)\Newtonsoft.Json.dll"
           DestinationFolder="$(BuildDir64)\bin" />
   </Target>
 
