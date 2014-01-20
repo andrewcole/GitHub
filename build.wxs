@@ -64,6 +64,9 @@
 
     <Feature Id="Complete" Level="1" Title="$(var.AppName)">
       <Component Id="IllallangiGitHubDllC" Directory="SOFTWAREDIR" Guid="{128F2E8F-113A-4195-8666-671D04F4D492}" Permanent="yes" >
+        <File Id="IllallangiGitHubDllC" KeyPath="yes" Source="$(var.source)\Illallangi.GitHub.dll" />
+      </Component>
+      <Component Id="IllallangiGitHubPowerShellDllC" Directory="SOFTWAREDIR" Guid="{4FBA63C9-BE55-44E1-AD2D-D159E289CF6B}" Permanent="yes" >
         <File Id="IllallangiGitHubPowerShellDllC" KeyPath="yes" Source="$(var.source)\Illallangi.GitHub.PowerShell.dll" />
         <File Id="IllallangiGitHubPowerShellDllCConfig" Source="$(var.source)\Illallangi.GitHub.PowerShell.dll.Config" />
         <File Id="IllallangiGitHubDllCPSD1" Source="$(var.source)\Illallangi.GitHub.psd1" />
@@ -72,8 +75,44 @@
       <Component Id="NewtonsoftJsonDllC" Directory="SOFTWAREDIR" Guid="{40CAFE9F-8506-4303-949E-363DB2841885}" Permanent="yes" >
         <File Id="NewtonsoftJsonDllF" KeyPath="yes" Source="$(var.source)\Newtonsoft.Json.dll" />
       </Component>
-      <Component Id="OctoKitDllC" Directory="SOFTWAREDIR" Guid="{5715C50A-DB95-481C-9F7F-5AA5C9D3B153}" Permanent="yes" >
-        <File Id="OctoKitDllF" KeyPath="yes" Source="$(var.source)\OctoKit.dll" />
+      <Component Id="CommonLoggingdllC" Directory="SOFTWAREDIR" Guid="{C6761973-10E8-45A4-9786-21CD90D594A7}" Permanent="yes" >
+        <File Id="CommonLoggingdllF" KeyPath="yes" Source="$(var.source)\Common.Logging.dll" />
+      </Component>
+      <Component Id="CommonLoggingLog4NetdllC" Directory="SOFTWAREDIR" Guid="{FBC439C6-B5C8-4222-B827-BA3274F6F59F}" Permanent="yes" >
+        <File Id="CommonLoggingLog4NetdllF" KeyPath="yes" Source="$(var.source)\Common.Logging.Log4Net.dll" />
+      </Component>
+      <Component Id="IllallangiETagCachedllC" Directory="SOFTWAREDIR" Guid="{99A3525A-58D7-40F6-BFB3-F97EA8E173E5}" Permanent="yes" >
+        <File Id="IllallangiETagCachedllF" KeyPath="yes" Source="$(var.source)\Illallangi.ETagCache.dll" />
+      </Component>
+      <Component Id="IllallangiLiteOrmdllC" Directory="SOFTWAREDIR" Guid="{155700B1-3C88-4E53-B6BD-0FFF8214A585}" Permanent="yes" >
+        <File Id="IllallangiLiteOrmdllF" KeyPath="yes" Source="$(var.source)\Illallangi.LiteOrm.dll" />
+      </Component>
+      <Component Id="IllallangiNinjectCmdletdllC" Directory="SOFTWAREDIR" Guid="{DBAF6991-C959-4229-A2D4-292C6EB29780}" Permanent="yes" >
+        <File Id="IllallangiNinjectCmdletdllF" KeyPath="yes" Source="$(var.source)\Illallangi.NinjectCmdlet.dll" />
+      </Component>
+      <Component Id="IllallangiRestClientdllC" Directory="SOFTWAREDIR" Guid="{E8EDD93A-B215-45FC-935D-4066B2F1CEF1}" Permanent="yes" >
+        <File Id="IllallangiRestClientdllF" KeyPath="yes" Source="$(var.source)\Illallangi.RestClient.dll" />
+      </Component>
+      <Component Id="log4netdllC" Directory="SOFTWAREDIR" Guid="{C1043EC5-10D5-4A2A-BAF7-6BE25D059F49}" Permanent="yes" >
+        <File Id="log4netdllF" KeyPath="yes" Source="$(var.source)\log4net.dll" />
+      </Component>
+      <Component Id="NinjectdllC" Directory="SOFTWAREDIR" Guid="{97DAE7C9-EA1A-4D5D-9C67-44B86D2DD262}" Permanent="yes" >
+        <File Id="NinjectdllF" KeyPath="yes" Source="$(var.source)\Ninject.dll" />
+      </Component>
+      <Component Id="RestSharpdllC" Directory="SOFTWAREDIR" Guid="{1EB7AF40-AADD-443C-AC4D-0BF157FA005D}" Permanent="yes" >
+        <File Id="RestSharpdllF" KeyPath="yes" Source="$(var.source)\RestSharp.dll" />
+      </Component>
+      <Component Id="SQLiteInteropdllC" Directory="SOFTWAREDIR" Guid="{B3C0F60F-0423-4BD5-BFF1-61763A512418}" Permanent="yes" >
+        <File Id="SQLiteInteropdllF" KeyPath="yes" Source="$(var.source)\SQLite.Interop.dll" />
+      </Component>
+      <Component Id="SystemDataSQLitedllC" Directory="SOFTWAREDIR" Guid="{B2CA4B0E-FF4F-4723-98F6-2E068DCB60EF}" Permanent="yes" >
+        <File Id="SystemDataSQLitedllF" KeyPath="yes" Source="$(var.source)\System.Data.SQLite.dll" />
+      </Component>
+      <Component Id="SystemDataSQLiteLinqdllC" Directory="SOFTWAREDIR" Guid="{A24CE95C-68D3-4329-A858-476C20251414}" Permanent="yes" >
+        <File Id="SystemDataSQLiteLinqdllF" KeyPath="yes" Source="$(var.source)\System.Data.SQLite.Linq.dll" />
+      </Component>
+      <Component Id="TavisUriTemplatesdllC" Directory="SOFTWAREDIR" Guid="{440EF678-2CD2-4059-A8C7-5FC93E836BE8}" Permanent="yes" >
+        <File Id="TavisUriTemplatesdllF" KeyPath="yes" Source="$(var.source)\Tavis.UriTemplates.dll" />
       </Component>
       <ComponentRef Id="Empty" />
     </Feature>

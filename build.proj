@@ -81,16 +81,55 @@
     <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Illallangi.GitHub.PowerShell.dll.config"
           DestinationFolder="$(BuildDir32)\bin" />
 
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Illallangi.GitHub.dll"
+          DestinationFolder="$(BuildDir32)\bin" />
+
     <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Illallangi.GitHub.psd1"
           DestinationFolder="$(BuildDir32)\bin" />
-    
+
     <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Illallangi.GitHub.psm1"
           DestinationFolder="$(BuildDir32)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Octokit.dll"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Illallangi.ETagCache.dll"
+          DestinationFolder="$(BuildDir32)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Illallangi.LiteOrm.dll"
+          DestinationFolder="$(BuildDir32)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Illallangi.NinjectCmdlet.dll"
+          DestinationFolder="$(BuildDir32)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Illallangi.RestClient.dll"
+          DestinationFolder="$(BuildDir32)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Common.Logging.dll"
+          DestinationFolder="$(BuildDir32)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Common.Logging.Log4Net.dll"
+          DestinationFolder="$(BuildDir32)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\log4net.dll"
+          DestinationFolder="$(BuildDir32)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Ninject.dll"
           DestinationFolder="$(BuildDir32)\bin" />
 
     <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Newtonsoft.Json.dll"
+          DestinationFolder="$(BuildDir32)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\RestSharp.dll"
+          DestinationFolder="$(BuildDir32)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\System.Data.SQLite.dll"
+          DestinationFolder="$(BuildDir32)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\System.Data.SQLite.Linq.dll"
+          DestinationFolder="$(BuildDir32)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Tavis.UriTemplates.dll"
+          DestinationFolder="$(BuildDir32)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\x86\SQLite.Interop.dll"
           DestinationFolder="$(BuildDir32)\bin" />
   </Target>
   
@@ -105,16 +144,55 @@
     <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Illallangi.GitHub.PowerShell.dll.config"
           DestinationFolder="$(BuildDir64)\bin" />
 
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Illallangi.GitHub.dll"
+          DestinationFolder="$(BuildDir64)\bin" />
+
     <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Illallangi.GitHub.psd1"
           DestinationFolder="$(BuildDir64)\bin" />
 
     <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Illallangi.GitHub.psm1"
           DestinationFolder="$(BuildDir64)\bin" />
 
-    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Octokit.dll"
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Illallangi.ETagCache.dll"
+          DestinationFolder="$(BuildDir64)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Illallangi.LiteOrm.dll"
+          DestinationFolder="$(BuildDir64)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Illallangi.NinjectCmdlet.dll"
+          DestinationFolder="$(BuildDir64)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Illallangi.RestClient.dll"
+          DestinationFolder="$(BuildDir64)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Common.Logging.dll"
+          DestinationFolder="$(BuildDir64)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Common.Logging.Log4Net.dll"
+          DestinationFolder="$(BuildDir64)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\log4net.dll"
+          DestinationFolder="$(BuildDir64)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Ninject.dll"
           DestinationFolder="$(BuildDir64)\bin" />
 
     <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Newtonsoft.Json.dll"
+          DestinationFolder="$(BuildDir64)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\RestSharp.dll"
+          DestinationFolder="$(BuildDir64)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\System.Data.SQLite.dll"
+          DestinationFolder="$(BuildDir64)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\System.Data.SQLite.Linq.dll"
+          DestinationFolder="$(BuildDir64)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\Tavis.UriTemplates.dll"
+          DestinationFolder="$(BuildDir64)\bin" />
+
+    <Copy SourceFiles="$(SourceDir)\Illallangi.GitHub.PowerShell\bin\$(Configuration)\x86\SQLite.Interop.dll"
           DestinationFolder="$(BuildDir64)\bin" />
   </Target>
 
