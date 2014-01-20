@@ -57,10 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clients\AuthorizationsClient.cs" />
+    <Compile Include="Clients\OrganizationClient.cs" />
     <Compile Include="Model\GitHubAuthorization.cs" />
     <Compile Include="Clients\UserClient.cs" />
     <Compile Include="Config\GitHubToken.cs" />
     <Compile Include="Config\IGitHubConfig.cs" />
+    <Compile Include="Model\GitHubOrganization.cs" />
     <Compile Include="Model\GitHubOwner.cs" />
     <Compile Include="Model\GitHubUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
