@@ -6,49 +6,19 @@ using Ninject;
 
 namespace Illallangi.GitHub.PowerShell
 {
-    [Cmdlet(VerbsCommon.Get, Nouns.Abstract)]
-    public abstract class GitHubCmdlet<T> : PSCmdlet, IGitHubClientConfig where T : class
+    [Cmdlet(VerbsCommon.Get, GitHubCmdlet<T>.Null)]
+    public abstract class GitHubCmdlet<T> : NinjectCmdlet<GitHubModule> where T : class
     {
-        private StandardKernel currentKernel;
-        private GitHubModule currentModule;
-
-        private GitHubModule Module
+        public GitHubCmdlet()
+            : base(new NinjectSettings { AllowNullInjection = true })
         {
-            get
-            {
-                return this.currentModule ?? (this.currentModule = this.GetModule());
-            }
         }
-
-        private StandardKernel Kernel
-        {
-            get
-            {
-                return this.currentKernel ?? (this.currentKernel = this.GetKernel());
-            }
-        }
-
-        private GitHubModule GetModule()
-        {
-            return new GitHubModule(this);
-        }
-
-        private StandardKernel GetKernel()
-        {
-            return new StandardKernel(this.Module);
-        }
-
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
-        public virtual string UserName { get; set; }
-
-        [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false)]
-        public virtual string Token { get; set; }
 
         protected override void ProcessRecord()
         {
             try
             {
-                this.WriteObject(this.Process(this.Kernel.Get<T>()), true);
+                this.WriteObject(this.Process(this.Get<T>()), true);
             }
             catch (AggregateException failures)
             {

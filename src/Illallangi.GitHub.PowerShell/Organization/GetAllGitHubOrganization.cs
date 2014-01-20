@@ -11,12 +11,12 @@ namespace Illallangi.GitHub.PowerShell.Organization
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ParameterSetName = "GetAll")]
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ParameterSetName = "GetAllForCurrent")]
         [Parameter(Mandatory = true, ValueFromPipelineByPropertyName = false, ParameterSetName = "GetOrganization")]
-        public override string UserName { get; set; }
+        public string UserName { get; set; }
 
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ParameterSetName = "GetAll")]
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ParameterSetName = "GetAllForCurrent")]
         [Parameter(Mandatory = false, ValueFromPipelineByPropertyName = false, ParameterSetName = "GetOrganization")]
-        public override string Token { get; set; }
+        public string Token { get; set; }
 
         [Parameter(Mandatory = true, ValueFromPipeline = true, ValueFromPipelineByPropertyName = false, ParameterSetName = "GetAll")]
         public string User { get; set; }

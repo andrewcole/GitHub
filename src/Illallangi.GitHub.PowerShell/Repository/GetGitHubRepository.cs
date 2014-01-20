@@ -17,7 +17,7 @@ namespace Illallangi.GitHub.PowerShell.Repository
         {
             return !string.IsNullOrEmpty(this.Organization) ? 
                 client.GetAllForOrg(this.Organization).Result : 
-                client.GetAllForUser(this.User ?? this.UserName).Result;
+                client.GetAllForUser(this.User).Result;
         }
     }
 }
