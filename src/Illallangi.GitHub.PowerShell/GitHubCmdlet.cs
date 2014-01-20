@@ -9,7 +9,7 @@ namespace Illallangi.GitHub.PowerShell
     [Cmdlet(VerbsCommon.Get, GitHubCmdlet<T>.Null)]
     public abstract class GitHubCmdlet<T> : NinjectCmdlet<GitHubModule> where T : class
     {
-        public GitHubCmdlet()
+        protected GitHubCmdlet()
             : base(new NinjectSettings { AllowNullInjection = true })
         {
         }
