@@ -67,8 +67,6 @@
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="GetGitHubAccessToken.cs" />
     <Compile Include="GitHubModule.cs" />
-    <Compile Include="Miscellaneous\ConvertRawMarkDown.cs" />
-    <Compile Include="Miscellaneous\GetGitHubEmojis.cs" />
     <Compile Include="Organization\GetAllGitHubOrganization.cs" />
     <Compile Include="Repository\GetGitHubRepository.cs" />
     <Compile Include="GitHubCmdlet.cs" />
