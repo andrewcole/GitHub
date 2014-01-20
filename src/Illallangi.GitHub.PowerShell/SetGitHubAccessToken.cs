@@ -1,7 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Management.Automation;
-using Illallangi.GitHub.PowerShell.Config;
+
+using Illallangi.GitHub.Config;
 
 namespace Illallangi.GitHub.PowerShell
 {
