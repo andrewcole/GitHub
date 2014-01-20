@@ -36,15 +36,29 @@
     </GitVersion>
 
     <AssemblyInfo CodeLanguage="CS"
+                  OutputFile="$(SourceDir)\Illallangi.GitHub\Properties\AssemblyInfo.cs"
+                  AssemblyTitle="GitHub Client"
+                  AssemblyDescription=""
+                  AssemblyCompany="Illallangi Enterprises"
+                  AssemblyProduct="GitHub Client"
+                  AssemblyCopyright="Copyright © Illallangi Enterprises 2014"
+                  ComVisible="false"
+                  AssemblyInformationalVersion="Built from hash '$(GitCommitHash)'"
+                  Guid="91ce24d2-34cb-46c2-9511-9f186c75b5e3"
+                  AssemblyVersion="$(Version)"
+                  AssemblyFileVersion="$(Version)"
+                  Condition="$(Version) != '0.0.0.1'" />
+    
+    <AssemblyInfo CodeLanguage="CS"
                   OutputFile="$(SourceDir)\Illallangi.GitHub.PowerShell\Properties\AssemblyInfo.cs"
                   AssemblyTitle="GitHub PowerShell Module"
                   AssemblyDescription=""
                   AssemblyCompany="Illallangi Enterprises"
                   AssemblyProduct="GitHub PowerShell Module"
-                  AssemblyCopyright="Copyright © Illallangi Enterprises 2013"
+                  AssemblyCopyright="Copyright © Illallangi Enterprises 2014"
                   ComVisible="false"
                   AssemblyInformationalVersion="Built from hash '$(GitCommitHash)'"
-                  Guid="90DEE887-18D3-4C48-BD02-3D40828ABF7E"
+                  Guid="97694481-7187-4631-ac5e-cbfabb1de835"
                   AssemblyVersion="$(Version)"
                   AssemblyFileVersion="$(Version)" 
                   Condition="$(Version) != '0.0.0.1'" />
