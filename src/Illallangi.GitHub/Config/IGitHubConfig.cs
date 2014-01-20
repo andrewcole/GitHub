@@ -6,6 +6,10 @@ namespace Illallangi.GitHub.Config
     {
         string BaseUrl { get; }
 
+        string ClientId { get; }
+
+        string ClientSecret { get; }
+
         IEnumerable<KeyValuePair<string, string>> GetDefaultParameters();
     }
 }

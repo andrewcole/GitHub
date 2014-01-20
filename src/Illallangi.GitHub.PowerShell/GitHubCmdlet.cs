@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Management.Automation;
+
+using Illallangi.GitHub.Config;
 using Illallangi.GitHub.PowerShell.Config;
 using Ninject;
 
@@ -28,7 +30,7 @@ namespace Illallangi.GitHub.PowerShell
                         failure,
                         failure.Message,
                         ErrorCategory.InvalidResult,
-                        GitHubConfig.Config));
+                        this.Get<IGitHubConfig>()));
                 }
             }
             catch (Exception failure)
@@ -37,7 +39,7 @@ namespace Illallangi.GitHub.PowerShell
                     failure,
                     failure.Message,
                     ErrorCategory.InvalidResult,
-                    GitHubConfig.Config));
+                    this.Get<IGitHubConfig>()));
             }
         }
 

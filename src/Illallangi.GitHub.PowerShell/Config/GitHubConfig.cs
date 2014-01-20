@@ -1,42 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.Text;
 
+using Illallangi.GitHub.Config;
+
 namespace Illallangi.GitHub.PowerShell.Config
 {
-    public sealed class GitHubConfig : ConfigurationSection
+    public sealed class GitHubConfig : ConfigurationSection, IGitHubConfig
     {
-        private static string staticPath;
-        private static Configuration staticExeConfig;
-        private static GitHubConfig staticConfig;
-
-        private static string Path
-        {
-            get
-            {
-                return GitHubConfig.staticPath ??
-                    (GitHubConfig.staticPath = System.Reflection.Assembly.GetExecutingAssembly().Location);
-            }
-        }
-
-        private static Configuration ExeConfig
-        {
-            get
-            {
-                return GitHubConfig.staticExeConfig ??
-                    (GitHubConfig.staticExeConfig = ConfigurationManager.OpenExeConfiguration(GitHubConfig.Path));
-            }
-        }
-
-        public static GitHubConfig Config
-        {
-            get
-            {
-                return GitHubConfig.staticConfig ??
-                    (GitHubConfig.staticConfig = (GitHubConfig)GitHubConfig.ExeConfig.GetSection("GitHubConfig"));
-            }
-        }
-
         [ConfigurationProperty("ClientId", IsRequired = true)]
         public string ClientId
         {
@@ -75,6 +47,29 @@ namespace Illallangi.GitHub.PowerShell.Config
         public string EncryptTokenCacheEntropy
         {
             get { return (string)this["EncryptTokenCacheEntropy"]; }
+        }
+
+        [ConfigurationProperty("BaseUrl", DefaultValue = @"https://api.github.com/", IsRequired = false)]
+        public string BaseUrl
+        {
+            get
+            {
+                return (string)this["BaseUrl"];
+            }
+        }
+
+        [ConfigurationProperty("UserAgent", DefaultValue = @"illallangi-ps/GitHub", IsRequired = false)]
+        public string UserAgent
+        {
+            get
+            {
+                return (string)this["UserAgent"];
+            }
+        }
+
+        public IEnumerable<KeyValuePair<string, string>> GetDefaultParameters()
+        {
+            yield break;
         }
 
         public byte[] EncryptTokenCacheOptionalEntropy

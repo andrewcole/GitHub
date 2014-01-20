@@ -62,7 +62,6 @@
   <ItemGroup>
     <Compile Include="Config\GitHubConfig.cs" />
     <Compile Include="Config\GitHubToken.cs" />
-    <Compile Include="Config\GitHubTokenCache.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="GetGitHubAccessToken.cs" />
     <Compile Include="GitHubModule.cs" />
