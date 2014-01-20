@@ -80,6 +80,9 @@
     <Compile Include="User\GetGitHubUser.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Log4Net.config" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="App.config" />
     <None Include="Illallangi.GitHub.psd1">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
