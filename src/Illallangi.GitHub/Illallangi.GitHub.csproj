@@ -66,13 +66,9 @@
     <Compile Include="GitHub\IGitHubClientConfig.cs" />
     <Compile Include="GitHub\Miscellaneous\ConvertRawMarkDown.cs" />
     <Compile Include="GitHub\Miscellaneous\GetGitHubEmojis.cs" />
-    <Compile Include="GitHub\Notification\GetGitHubNotification.cs" />
     <Compile Include="GitHub\Organization\GetAllGitHubOrganization.cs" />
     <Compile Include="GitHub\Repository\GetGitHubRepository.cs" />
     <Compile Include="GitHub\GitHubCmdlet.cs" />
-    <Compile Include="GitHub\Release\NewGitHubReleaseAsset.cs" />
-    <Compile Include="GitHub\Release\GetGitHubRelease.cs" />
-    <Compile Include="GitHub\Release\NewGitHubRelease.cs" />
     <Compile Include="GitHub\SetGitHubAccessToken.cs" />
     <Compile Include="Nouns.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -90,11 +86,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GitHub\Authorization\" />
-    <Folder Include="GitHub\Connection\" />
-    <Folder Include="GitHub\Issue\Assignee\" />
-    <Folder Include="GitHub\Issue\Milestone\" />
-    <Folder Include="GitHub\Repository\CommitStatus\" />
     <Folder Include="GitHub\SshKey\" />
     <Folder Include="GitHub\User\" />
   </ItemGroup>
