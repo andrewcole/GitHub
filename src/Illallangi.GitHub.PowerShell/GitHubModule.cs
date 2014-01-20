@@ -1,5 +1,4 @@
 ﻿using System.Configuration;
-using System.Net.Http.Headers;
 using System.Reflection;
 
 using Illallangi.GitHub.Config;
