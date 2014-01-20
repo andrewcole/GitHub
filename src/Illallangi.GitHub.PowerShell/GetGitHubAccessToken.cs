@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Management.Automation;
-using System.Net.Http.Headers;
 
+using Illallangi.GitHub.Clients;
 using Illallangi.GitHub.Config;
-using Illallangi.GitHub.PowerShell.Config;
-using Illallangi.GitHub.PowerShell.Extensions;
-using Octokit;
 
 namespace Illallangi.GitHub.PowerShell
 {
@@ -26,21 +22,9 @@ namespace Illallangi.GitHub.PowerShell
             switch (this.ParameterSetName)
             {
                 case "API":
-                    var client = new GitHubClient(new ProductHeaderValue(this.Get<IGitHubConfig>().ClientId));
-                    client.Connection.Credentials = this.Credentials.ConvertToOctokitCredentials();
-
-                    var authToken =
-                        client.Authorization.GetOrCreateApplicationAuthentication(
-                            this.Get<IGitHubConfig>().ClientId,
-                            this.Get<IGitHubConfig>().ClientSecret, 
-                            new NewAuthorization()).Result;
-
-                    this.WriteObject(new
-                    {
-                        authToken.Token,
-                        this.Credentials.UserName,
-                    });
-                    
+                    this.WriteObject(
+                        this.Get<AuthorizationsClient>()
+                            .GetOrCreateAuthorization(string.Empty, new[] { string.Empty }, string.Empty, string.Empty));
                     break;
                 case "Cache":
                     this.WriteObject(

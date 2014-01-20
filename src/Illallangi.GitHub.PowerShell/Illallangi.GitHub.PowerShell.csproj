@@ -73,7 +73,6 @@
     <Compile Include="SetGitHubAccessToken.cs" />
     <Compile Include="Nouns.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Extensions\PSCredentialExtensions.cs" />
     <Compile Include="Extensions\SecureStringExtensions.cs" />
     <Compile Include="User\GetGitHubUser.cs" />
   </ItemGroup>

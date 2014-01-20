@@ -56,6 +56,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clients\AuthorizationsClient.cs" />
+    <Compile Include="Model\GitHubAuthorization.cs" />
     <Compile Include="Clients\UserClient.cs" />
     <Compile Include="Config\GitHubToken.cs" />
     <Compile Include="Config\IGitHubConfig.cs" />
