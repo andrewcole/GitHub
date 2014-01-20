@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using Illallangi.GitHub.Extensions;
+using Illallangi.GitHub.PowerShell.Extensions;
 using Newtonsoft.Json;
 
-namespace Illallangi.GitHub.Config
+namespace Illallangi.GitHub.PowerShell.Config
 {
     public sealed class GitHubTokenCache : List<GitHubToken>
     {

@@ -1,7 +1,7 @@
 using System.Management.Automation;
-using Illallangi.GitHub.Config;
+using Illallangi.GitHub.PowerShell.Config;
 
-namespace Illallangi.GitHub.GitHub
+namespace Illallangi.GitHub.PowerShell.GitHub
 {
     [Cmdlet(VerbsCommon.Set, Nouns.GitHubAccessToken)]
     public sealed class SetGitHubAccessToken : PSCmdlet

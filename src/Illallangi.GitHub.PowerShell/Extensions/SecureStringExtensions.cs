@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Security;
 
-namespace Illallangi.GitHub.Extensions
+namespace Illallangi.GitHub.PowerShell.Extensions
 {
     public static class SecureStringExtensions
     {

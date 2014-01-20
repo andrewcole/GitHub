@@ -1,7 +1,7 @@
 ﻿using System.Management.Automation;
 using Octokit;
 
-namespace Illallangi.GitHub.Extensions
+namespace Illallangi.GitHub.PowerShell.Extensions
 {
     public static class PSCredentialExtensions
     {

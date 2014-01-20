@@ -1,11 +1,11 @@
 ﻿using System.Linq;
 using System.Net.Http.Headers;
-using Illallangi.GitHub.Config;
+using Illallangi.GitHub.PowerShell.Config;
 using Ninject;
 using Ninject.Modules;
 using Octokit;
 
-namespace Illallangi.GitHub.GitHub
+namespace Illallangi.GitHub.PowerShell.GitHub
 {
     public sealed class GitHubModule : NinjectModule
     {

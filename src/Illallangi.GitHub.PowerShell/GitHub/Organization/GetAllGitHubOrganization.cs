@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Management.Automation;
 using Octokit;
 
-namespace Illallangi.GitHub.GitHub.Organization
+namespace Illallangi.GitHub.PowerShell.GitHub.Organization
 {
     [Cmdlet(VerbsCommon.Get, Nouns.GitHubOrganization)]
     public class GetGitHubOrganization : GitHubCmdlet<IOrganizationsClient>

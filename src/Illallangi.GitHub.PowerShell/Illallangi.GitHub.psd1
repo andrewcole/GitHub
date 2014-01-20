@@ -1,5 +1,5 @@
 ﻿@{
-    ModuleToProcess = 'Illallangi.GitHub.dll'
+    ModuleToProcess = 'Illallangi.GitHub.PowerShell.dll'
     NestedModules = 'Illallangi.GitHub.psm1'
     ModuleVersion = '1.0'
     GUID = '95E0F4B0-125F-4E4A-8A11-D0FE04506642'

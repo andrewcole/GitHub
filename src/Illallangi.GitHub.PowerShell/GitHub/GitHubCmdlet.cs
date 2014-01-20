@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Management.Automation;
-using Illallangi.GitHub.Config;
+using Illallangi.GitHub.PowerShell.Config;
 using Ninject;
 
-namespace Illallangi.GitHub.GitHub
+namespace Illallangi.GitHub.PowerShell.GitHub
 {
     [Cmdlet(VerbsCommon.Get, Nouns.Abstract)]
     public abstract class GitHubCmdlet<T> : PSCmdlet, IGitHubClientConfig where T : class

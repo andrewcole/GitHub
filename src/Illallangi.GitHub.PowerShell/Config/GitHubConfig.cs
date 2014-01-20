@@ -2,7 +2,7 @@
 using System.Configuration;
 using System.Text;
 
-namespace Illallangi.GitHub.Config
+namespace Illallangi.GitHub.PowerShell.Config
 {
     public sealed class GitHubConfig : ConfigurationSection
     {

@@ -1,4 +1,4 @@
-﻿namespace Illallangi.GitHub.Config
+﻿namespace Illallangi.GitHub.PowerShell.Config
 {
     public sealed class GitHubToken
     {

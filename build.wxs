@@ -64,8 +64,8 @@
 
     <Feature Id="Complete" Level="1" Title="$(var.AppName)">
       <Component Id="IllallangiGitHubDllC" Directory="SOFTWAREDIR" Guid="{128F2E8F-113A-4195-8666-671D04F4D492}" Permanent="yes" >
-        <File Id="IllallangiGitHubDllC" KeyPath="yes" Source="$(var.source)\Illallangi.GitHub.dll" />
-        <File Id="IllallangiGitHubDllCConfig" Source="$(var.source)\Illallangi.GitHub.dll.Config" />
+        <File Id="IllallangiGitHubPowerShellDllC" KeyPath="yes" Source="$(var.source)\Illallangi.GitHub.PowerShell.dll" />
+        <File Id="IllallangiGitHubPowerShellDllCConfig" Source="$(var.source)\Illallangi.GitHub.PowerShell.dll.Config" />
         <File Id="IllallangiGitHubDllCPSD1" Source="$(var.source)\Illallangi.GitHub.psd1" />
         <File Id="IllallangiGitHubDllCPSM1" Source="$(var.source)\Illallangi.GitHub.psm1" />
       </Component>

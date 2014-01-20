@@ -2,11 +2,11 @@
 using System.Linq;
 using System.Management.Automation;
 using System.Net.Http.Headers;
-using Illallangi.GitHub.Config;
-using Illallangi.GitHub.Extensions;
+using Illallangi.GitHub.PowerShell.Config;
+using Illallangi.GitHub.PowerShell.Extensions;
 using Octokit;
 
-namespace Illallangi.GitHub.GitHub
+namespace Illallangi.GitHub.PowerShell.GitHub
 {
     [Cmdlet(VerbsCommon.Get, Nouns.GitHubAccessToken, DefaultParameterSetName = "Cache")]
     public class GetGitHubAccessToken : PSCmdlet

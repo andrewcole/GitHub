@@ -2,7 +2,7 @@
 using System.Management.Automation;
 using Octokit;
 
-namespace Illallangi.GitHub.GitHub.Repository
+namespace Illallangi.GitHub.PowerShell.GitHub.Repository
 {
     [Cmdlet(VerbsCommon.Get, Nouns.GitHubRepository)]
     public class GetGitHubRepository : GitHubCmdlet<IRepositoriesClient>

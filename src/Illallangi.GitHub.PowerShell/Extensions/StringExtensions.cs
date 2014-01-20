@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace Illallangi.GitHub.Extensions
+namespace Illallangi.GitHub.PowerShell.Extensions
 {
     public static class StringExtensions
     {
