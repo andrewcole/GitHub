@@ -5,6 +5,7 @@ using System.Reflection;
 using Common.Logging;
 using Common.Logging.Log4Net;
 
+using Illallangi.ETagCache.Context;
 using Illallangi.GitHub.Config;
 using Illallangi.GitHub.PowerShell.Config;
 
@@ -34,6 +35,8 @@ namespace Illallangi.GitHub.PowerShell
                     (GitHubConfig)
                     ConfigurationManager.OpenExeConfiguration(Assembly.GetExecutingAssembly().Location)
                         .GetSection("GitHubConfig"));
+
+            this.Bind<IRestCache>().To<CacheEntryRepository>().InTransientScope();
 
             this.Bind<ILog>().ToMethod(cx => LogManager.GetLogger(cx.Request.Target.Type));
         }
