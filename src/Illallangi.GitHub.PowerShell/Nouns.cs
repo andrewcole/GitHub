@@ -2,10 +2,20 @@
 {
     public static class Nouns
     {
-        public const string Abstract = "Abstract";
+        // User
+        public const string GitHubUser = "GitHubUser";
 
+        // Organization
+        public const string GitHubOrganization = "GitHubOrganization";
+
+        // AccessToken
         public const string GitHubAccessToken = "GitHubAccessToken";
+        
+        // Repository
         public const string GitHubRepository = "GitHubRepository";
+
+        // Hook
+        public const string GitHubHook = "GitHubHook";
 
         // Miscellaneous
         public const string RawMarkDown = "RawMarkDown";
@@ -14,9 +24,6 @@
         // Notification
         public const string GitHubNotification = "GitHubNotification";
 
-        // Organization
-        public const string GitHubOrganization = "GitHubOrganization";
-        
         // Release
         public const string GitHubRelease = "GitHubRelease";
         public const string GitHubReleaseAsset = "GitHubReleaseAsset";
