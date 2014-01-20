@@ -56,8 +56,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clients\UserClient.cs" />
     <Compile Include="Config\GitHubToken.cs" />
     <Compile Include="Config\IGitHubConfig.cs" />
+    <Compile Include="Model\GitHubOwner.cs" />
+    <Compile Include="Model\GitHubUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
