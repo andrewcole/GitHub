@@ -5,7 +5,7 @@ using Ninject;
 using Ninject.Modules;
 using Octokit;
 
-namespace Illallangi.GitHub.PowerShell.GitHub
+namespace Illallangi.GitHub.PowerShell
 {
     public sealed class GitHubModule : NinjectModule
     {

@@ -1,4 +1,4 @@
-﻿namespace Illallangi.GitHub
+﻿namespace Illallangi.GitHub.PowerShell
 {
     public static class Nouns
     {

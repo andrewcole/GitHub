@@ -1,4 +1,4 @@
-﻿namespace Illallangi.GitHub.PowerShell.GitHub
+﻿namespace Illallangi.GitHub.PowerShell
 {
     public interface IGitHubClientConfig
     {

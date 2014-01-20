@@ -6,7 +6,7 @@ using Illallangi.GitHub.PowerShell.Config;
 using Illallangi.GitHub.PowerShell.Extensions;
 using Octokit;
 
-namespace Illallangi.GitHub.PowerShell.GitHub
+namespace Illallangi.GitHub.PowerShell
 {
     [Cmdlet(VerbsCommon.Get, Nouns.GitHubAccessToken, DefaultParameterSetName = "Cache")]
     public class GetGitHubAccessToken : PSCmdlet

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Management.Automation;
 using Octokit;
 
-namespace Illallangi.GitHub.PowerShell.GitHub.Miscellaneous
+namespace Illallangi.GitHub.PowerShell.Miscellaneous
 {
     [Cmdlet(VerbsCommon.Get, Nouns.GitHubEmojis)]
     public class GetGitHubEmojis : GitHubCmdlet<IMiscellaneousClient>
